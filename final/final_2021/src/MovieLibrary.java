@@ -7,7 +7,6 @@ public class MovieLibrary implements MovieComponent {
     public MovieLibrary(String libraryName) {
         this.libraryName = libraryName;
     }
-
     public void insert(MovieComponent m, boolean b) {
         if (b) {
             for (MovieComponent movie: movieLibrary) {
@@ -20,7 +19,6 @@ public class MovieLibrary implements MovieComponent {
         else {
             movieLibrary.add(m);
             System.out.println("MovieLibrary: " + m.getProductionYear() + " 년도에 제작된(구성된) 영화(시리즈) " + m.getName() + " 가(이) 추가되었습니다.");
-            libraryPrice += m.getPrice();
         }
     }
     public void delete(MovieComponent m) {
@@ -37,6 +35,7 @@ public class MovieLibrary implements MovieComponent {
     public String toString() {
         String str = "";
         for (MovieComponent movie: movieLibrary) {
+            libraryPrice += movie.getPrice();
             str += movie + "\n";
         }
         return "영화 라이브러리: " + libraryName + "\n" + "영화(시리즈) 개수: " + movieLibrary.size() + "\t\t영화 라이브러리 전체 구매 가격: " + libraryPrice + "\n\n" + str;
