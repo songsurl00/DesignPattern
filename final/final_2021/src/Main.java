@@ -12,8 +12,7 @@ public class Main {
         return random.nextInt(DIFF) + MIN_PRICE;
     }
 
-    public MovieSeries createMovieSeries(String name, String[] movieNames,
-                                         int[] years, double discountRate) {
+    public MovieSeries createMovieSeries(String name, String[] movieNames, int[] years, double discountRate) {
         // 새로운 시리즈 생성
         MovieSeries ms = new MovieSeries(name, 2021, discountRate);
 
