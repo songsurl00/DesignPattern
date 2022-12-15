@@ -8,9 +8,6 @@ public interface MovieComponent {
     default double getPrice() {
         throw new UnsupportedOperationException();
     }
-    default String getResolution() {
-        throw new UnsupportedOperationException();
-    }
     default MovieComponent getMovie(int i) {
         throw new UnsupportedOperationException();
     }
@@ -18,9 +15,6 @@ public interface MovieComponent {
         throw new UnsupportedOperationException();
     }
     default void setPrice(double price) {
-        throw new UnsupportedOperationException();
-    }
-    default void setResolution(String resolution) {
         throw new UnsupportedOperationException();
     }
     default boolean equals(MovieComponent m1, MovieComponent m2) {

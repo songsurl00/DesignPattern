@@ -25,14 +25,6 @@ public class Movie implements MovieComponent{
         this.price = price;
     }
 
-    public String getResolution() {
-        return resolution;
-    }
-
-    public void setResolution(String resolution) {
-        this.resolution = resolution;
-    }
-
     public boolean equals(MovieComponent m1, MovieComponent m2) {
         if (m1.getName() == m2.getName() && m1.getProductionYear() == m2.getProductionYear()) {
             return true;

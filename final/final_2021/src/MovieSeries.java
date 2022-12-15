@@ -5,7 +5,6 @@ public class MovieSeries implements MovieComponent {
     private String seriesName;
     private int productionYear;
     private double discountRate;
-    private double seriesPrice;
     public MovieSeries(String seriesName, int productionYear, double discountRate) {
         this.seriesName = seriesName;
         this.productionYear = productionYear;
@@ -20,6 +19,7 @@ public class MovieSeries implements MovieComponent {
         return productionYear;
     }
     public double getPrice() {
+        double seriesPrice = 0;
         for (MovieComponent movie: movieSeries) {
             seriesPrice += movie.getPrice();
         }
@@ -73,6 +73,6 @@ public class MovieSeries implements MovieComponent {
         for (MovieComponent movie: movieSeries) {
             str += "\t\t" + movie + "\n";
         }
-        return "Movie Series Name: " + seriesName + ", Price: " + seriesPrice + "원, Discount rate: " + discountRate + "%" + "\n" + str;
+        return "Movie Series Name: " + seriesName + ", Price: " + getPrice() + "원, Discount rate: " + discountRate + "%" + "\n" + str;
     }
 }
